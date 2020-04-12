@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'MapPage.dart';
 import 'loderPage.dart';
-import 'MapPage.dart';
+import 'MapPage/NewMapPage.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -14,13 +14,13 @@ class _SplashScreenState extends State<SplashScreen> {
 
     super.initState();
     Timer(Duration(seconds: 6),()=>Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
-      return MapPage();
+      return NewMapPage();
     })));
   }
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.deepOrangeAccent,
+      color: Colors.orangeAccent,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[

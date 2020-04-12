@@ -4,6 +4,7 @@ import '../DetailPage/DetailsPage3.dart';
 import '../widget/MapPage.dart';
 import '../widget/ScanPage.dart';
 import '../widget/contactPage.dart';
+import '../widget/MapPage/NewMapPage.dart';
 
 
 
@@ -30,7 +31,7 @@ class _LxRedPageState extends State<LxRedPage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => MapPage()),
+                      MaterialPageRoute(builder: (context) => NewMapPage()),
                     );
                   },
                 ),

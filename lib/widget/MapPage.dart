@@ -16,7 +16,7 @@ class _MapPageState extends State<MapPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepOrangeAccent,
+      backgroundColor: Colors.orangeAccent,
       body: ListView(
         children: <Widget>[
           Padding(
@@ -107,7 +107,7 @@ class _MapPageState extends State<MapPage> {
                       icon: Icon(Icons.location_on),
                       padding: EdgeInsets.only(left: 100 ,top: 140),
                       iconSize: 65,
-                      color: Colors.yellowAccent,
+                      color: Colors.white,
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -121,7 +121,7 @@ class _MapPageState extends State<MapPage> {
                       padding: EdgeInsets.only(left: 100,top: 140),
                       iconSize: 65,
                       
-                      color: Colors.blue[300],
+                      color: Colors.white,
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -138,7 +138,7 @@ class _MapPageState extends State<MapPage> {
                       padding: EdgeInsets.only(left: 120, top: 75),
                       icon: Icon(Icons.location_on),
                       iconSize: 65,
-                      color: Colors.orange[200],
+                      color: Colors.white,
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -151,7 +151,7 @@ class _MapPageState extends State<MapPage> {
                       icon: Icon(Icons.location_on),
                       padding: EdgeInsets.only(left: 85, top: 84),
                       iconSize: 65,
-                      color: Colors.red,
+                      color: Colors.white,
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -164,10 +164,35 @@ class _MapPageState extends State<MapPage> {
                 )
               ],
             ),
-          ),
+          ),ExhibitionBottomSheet(),
         ],
       ),
     );
   }
 }
 
+const double minHeight = 120;
+
+class ExhibitionBottomSheet extends StatefulWidget {
+  @override
+  _ExhibitionBottomSheetState createState() => _ExhibitionBottomSheetState();
+}
+
+class _ExhibitionBottomSheetState extends State<ExhibitionBottomSheet> {
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      height: minHeight,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 32),
+        decoration: const BoxDecoration(
+          color: Colors.black,
+          borderRadius: BorderRadius.vertical(top: Radius.circular(32))
+        ),
+      ),
+    );
+  }
+}
