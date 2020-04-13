@@ -1,23 +1,21 @@
 import 'package:flutter/material.dart';
 import '../widget/settingPage.dart';
-import '../DetailPage/DetailsPage3.dart';
-import '../widget/MapPage.dart';
+import '../DetailPage/DetailsPage1.dart';
+import '../widget/MapPage/NewMapPage.dart';
 import '../widget/ScanPage.dart';
 import '../widget/contactPage.dart';
-import '../widget/MapPage/NewMapPage.dart';
 
 
-
-class LxRedPage extends StatefulWidget {
+class zoneC extends StatefulWidget {
   @override
-  _LxRedPageState createState() => _LxRedPageState();
+  _zoneCState createState() => _zoneCState();
 }
 
-class _LxRedPageState extends State<LxRedPage> {
+class _zoneCState extends State<zoneC> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.purple,
       body: ListView(
         children: <Widget>[
           Padding(
@@ -46,7 +44,8 @@ class _LxRedPageState extends State<LxRedPage> {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) =>contactPage("")),
+                              MaterialPageRoute(
+                                  builder: (context) => contactPage("")),
                             );
                           },
                         ),
@@ -56,7 +55,8 @@ class _LxRedPageState extends State<LxRedPage> {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => SacnPage()),
+                              MaterialPageRoute(
+                                  builder: (context) => SacnPage()),
                             );
                           },
                         ),
@@ -66,7 +66,8 @@ class _LxRedPageState extends State<LxRedPage> {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => SettingPage()),
+                              MaterialPageRoute(
+                                  builder: (context) => SettingPage()),
                             );
                           },
                         )
@@ -87,7 +88,7 @@ class _LxRedPageState extends State<LxRedPage> {
                         fontWeight: FontWeight.bold,
                         fontSize: 25.0)),
                 SizedBox(width: 10.0),
-                Text('Hibition Red ZONE',
+                Text('Hibition Purple ZONE',
                     style: TextStyle(
                         fontFamily: 'Montserrat',
                         color: Colors.white,
@@ -97,7 +98,10 @@ class _LxRedPageState extends State<LxRedPage> {
           ),
           SizedBox(height: 40.0),
           Container(
-            height: MediaQuery.of(context).size.height - 185.0,
+            height: MediaQuery
+                .of(context)
+                .size
+                .height - 185.0,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(topLeft: Radius.circular(75.0)),
@@ -109,12 +113,22 @@ class _LxRedPageState extends State<LxRedPage> {
                 Padding(
                   padding: EdgeInsets.only(top: 45.0),
                   child: Container(
-                      height: MediaQuery.of(context).size.height - 300.0,
+                      height: MediaQuery
+                          .of(context)
+                          .size
+                          .height - 300.0,
                       child: ListView(children: [
-                        _buildFoodItem('assets/images/4.png', 'Escase Room', 'Computer Science',
-                            'Escase Room : berliuvv;eurvjner;vujr;jbuerv;uerbvrojvbe;r jbpjtn;beiubn','1013','1','bew9','Math','assets/images/unknown11.png'),
-                        _buildFoodItem('assets/images/1.png', 'ORO', 'Computer Science',
-                            'ORO : neurber;obnerbnio;rebnsr;tobinerilbkjnesr;ijnei;ner;jenr;jiernbe','1014','1','Bew10','Science','assets/images/unknown12.png'),
+                        _buildFoodItem(
+                            'assets/images/4.png', 'Self Diracted Learning', 'Computer Science',
+                            'Self Storage Room : neinbmenrobginrgpikrnbpiernbmeribnerpbkenrbpi','1004' , '1','Social' , 'Bew4','assets/images/unknown0.png'),
+                        _buildFoodItem('assets/images/1.png', 'Self Storage', 'Digital Service Innovation',
+                            'Self Storage : nberobuinesorbunerurniperbniepsrbnerpibnrepbnerpbiner','1005','1','Science' , 'Bew5','assets/images/unknown1.png'),
+                        _buildFoodItem('assets/images/2.png', 'VR MR AR', 'Information Technology',
+                            'VR MR AR : nbtiubseo;tbinrgboiergnesruilbre;iur;nurepnre;uineo ingeorinbu[e','1006','1','Math','Bew6','assets/images/unknown2.png'),
+                        _buildFoodItem('assets/images/3.png', 'Hand On workshop', 'Information Technology',
+                            'Hand On workshop : bperibuneripubnvo;iuebp;oernaiujenbnerier','1007','1','Health','Bew7','assets/images/unknown3.png'),
+                        _buildFoodItem('assets/images/5.png', 'Desing Studio', 'Information Technology',
+                            'Desing Studio : ginero[bnseruipghbrnp;goirnbpiaur;nearipugbner;gguergui','1008' ,'1','Bio','Bew8','assets/images/unknown4.png')
                       ])),),
 
                 Row(
@@ -128,7 +142,8 @@ class _LxRedPageState extends State<LxRedPage> {
                             Container(
                                 width: 150.0,
                                 child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment: MainAxisAlignment
+                                        .spaceBetween,
                                     children: <Widget>[
 
                                       IconButton(
@@ -138,7 +153,9 @@ class _LxRedPageState extends State<LxRedPage> {
                                         onPressed: () {
                                           Navigator.push(
                                             context,
-                                            MaterialPageRoute(builder: (context) =>MapPage()),
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    NewMapPage()),
                                           );
                                         },
                                       ),
@@ -165,8 +182,8 @@ class _LxRedPageState extends State<LxRedPage> {
         child: InkWell(
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => DetailsPage3(
-                    heroTag: imgPath, foodName: foodName, foodPrice: price, info: info, room: room, floor: floor, name: name,sub: sub,img: img)
+                  builder: (context) =>
+                      DetailsPage1(heroTag: imgPath, foodName: foodName, foodPrice: price, info: info, room: room, floor: floor, name: name,sub: sub,img: img,)
               ));
             },
             child: Row(
@@ -187,7 +204,7 @@ class _LxRedPageState extends State<LxRedPage> {
                           SizedBox(width: 10.0),
                           Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children:[
+                              children: [
                                 Text(
                                     foodName,
                                     style: TextStyle(
@@ -219,5 +236,4 @@ class _LxRedPageState extends State<LxRedPage> {
         ));
   }
 }
-
 

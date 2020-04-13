@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'MapPage.dart';
+import './MapPage/NewMapPage.dart';
 import 'loderPage.dart';
 import 'MapPage/NewMapPage.dart';
 

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import '../widget/settingPage.dart';
-import '../widget/MapPage.dart';
+import '../widget/MapPage/NewMapPage.dart';
 import '../widget/ScanPage.dart';
 import '../widget/contactPage.dart';
 import '../DetailPage/DetailsPage.dart';
 
 
-class LxBrownPage extends StatefulWidget {
+class zoneB extends StatefulWidget {
   @override
-  _LxBrownPageState createState() => _LxBrownPageState();
+  _zoneBState createState() => _zoneBState();
 }
 
-class _LxBrownPageState extends State<LxBrownPage> {
+class _zoneBState extends State<zoneB> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +29,7 @@ class _LxBrownPageState extends State<LxBrownPage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => MapPage()),
+                      MaterialPageRoute(builder: (context) => NewMapPage()),
                     );
                   },
                 ),
@@ -138,7 +138,7 @@ class _LxBrownPageState extends State<LxBrownPage> {
                                         onPressed: () {
                                           Navigator.push(
                                             context,
-                                            MaterialPageRoute(builder: (context) =>MapPage()),
+                                            MaterialPageRoute(builder: (context) => NewMapPage()),
                                           );
                                         },
                                       ),

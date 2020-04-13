@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import '../../zonePage/LxPurplePaage.dart';
-import '../../zonePage/LxRedPage.dart';
-import '../../zonePage/LxGreenPage.dart';
-import '../../zonePage/LxPinkPage.dart';
+import '../../zonePage/zoneA.dart';
+import '../../zonePage/zoneB.dart';
+import '../../zonePage/zoneC.dart';
+import '../../zonePage/zoneD.dart';
 import 'dart:math' as math;
 
 class sliding extends StatefulWidget {
@@ -34,6 +34,7 @@ class _slidingState extends State<sliding> {
   Widget build(BuildContext context) {
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.65,
+
       child: PageView(
         controller: pageController,
         children: <Widget>[
@@ -42,28 +43,28 @@ class _slidingState extends State<sliding> {
             date: '4.20-30',
             assetName: 'LXExhibitPlan01-1.jpg',
             offset: pageOffset,
-            zone: 'LxGreenPage()',
+            zone: zoneA(),
           ),
           SlidingCard(
             name: 'ZONE B',
             date: '4.28-31',
             assetName: 'LXExhibitPlan01-1.jpg',
             offset: pageOffset - 1,
-            zone: 'LxGreenPage',
+            zone: zoneB(),
           ),
           SlidingCard(
             name: 'ZONE C',
             date: '4.28-31',
             assetName: 'LXExhibitPlan01-1.jpg',
             offset: pageOffset - 2,
-            zone: 'LxGreenPage',
+            zone: zoneC(),
           ),
           SlidingCard(
             name: 'ZONE D',
             date: '4.28-31',
             assetName: 'LXExhibitPlan01-1.jpg',
             offset: pageOffset - 3,
-            zone: 'LxGreenPage',
+            zone: zoneD(),
           ),
         ],
       ),
@@ -76,7 +77,7 @@ class SlidingCard extends StatelessWidget {
   final String date;
   final String assetName;
   final double offset;
-  final String zone;
+  final zone;
 
   const SlidingCard({
     Key key,
@@ -127,7 +128,7 @@ class CardContent extends StatelessWidget {
   final String name;
   final String date;
   final double offset;
-  final String zone;
+  final zone;
 
   const CardContent(
       {Key key,
@@ -165,7 +166,7 @@ class CardContent extends StatelessWidget {
                   color: Color(0xFF162A49),
                   child: Transform.translate(
                     offset: Offset(24 * offset, 0),
-                    child: Text('Reserve'),
+                    child: Text('Acitivities of $name'),
                   ),
                   textColor: Colors.white,
                   shape: RoundedRectangleBorder(
@@ -174,7 +175,7 @@ class CardContent extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => LxRedPage() ),
+                      MaterialPageRoute(builder: (context) => zone),
                     );
                   },
                 ),

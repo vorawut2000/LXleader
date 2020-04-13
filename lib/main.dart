@@ -6,7 +6,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Mega Hd Filmes',
+      title: "LX'S Leader App",
       home: SplashScreen(),
       debugShowCheckedModeBanner: false,
     );

@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../settingPage.dart';
-import '../../zonePage/LxPurplePaage.dart';
-import '../../zonePage/LxRedPage.dart';
-import '../../zonePage/LxGreenPage.dart';
-import '../../zonePage/LxPinkPage.dart';
+import '../../zonePage/zoneA.dart';
+import '../../zonePage/zoneB.dart';
+import '../../zonePage/zoneC.dart';
+import '../../zonePage/zoneD.dart';
 import '../ScanPage.dart';
 import 'sliding.dart';
 import 'bottomSheet.dart';
