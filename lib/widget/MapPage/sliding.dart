@@ -42,25 +42,28 @@ class _slidingState extends State<sliding> {
             date: '4.20-30',
             assetName: 'LXExhibitPlan01-1.jpg',
             offset: pageOffset,
-            zone: 'LxGreenPage',
+            zone: 'LxGreenPage()',
           ),
           SlidingCard(
             name: 'ZONE B',
             date: '4.28-31',
-            assetName: 'rodion-kutsaev.jpeg',
+            assetName: 'LXExhibitPlan01-1.jpg',
             offset: pageOffset - 1,
+            zone: 'LxGreenPage',
           ),
           SlidingCard(
             name: 'ZONE C',
             date: '4.28-31',
-            assetName: 'rodion-kutsaev.jpeg',
-            offset: pageOffset - 1,
+            assetName: 'LXExhibitPlan01-1.jpg',
+            offset: pageOffset - 2,
+            zone: 'LxGreenPage',
           ),
           SlidingCard(
             name: 'ZONE D',
             date: '4.28-31',
-            assetName: 'rodion-kutsaev.jpeg',
-            offset: pageOffset - 1,
+            assetName: 'LXExhibitPlan01-1.jpg',
+            offset: pageOffset - 3,
+            zone: 'LxGreenPage',
           ),
         ],
       ),
@@ -110,6 +113,7 @@ class SlidingCard extends StatelessWidget {
                 name: name,
                 date: date,
                 offset: gauss,
+                zone: zone,
               ),
             ),
           ],
@@ -123,12 +127,14 @@ class CardContent extends StatelessWidget {
   final String name;
   final String date;
   final double offset;
+  final String zone;
 
   const CardContent(
       {Key key,
       @required this.name,
       @required this.date,
-      @required this.offset})
+      @required this.offset,
+      @required this.zone})
       : super(key: key);
 
   @override
@@ -168,7 +174,7 @@ class CardContent extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => LxRedPage()),
+                      MaterialPageRoute(builder: (context) => LxRedPage() ),
                     );
                   },
                 ),
