@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widget/MapPage/bottomSheet.dart';
 
 class DetailsPage2 extends StatefulWidget {
   final heroTag;
@@ -11,7 +12,7 @@ class DetailsPage2 extends StatefulWidget {
   final sub;
   final img;
 
-  DetailsPage2({this.heroTag, this.foodName, this.foodPrice, this.info, this.floor,this.name,this.room , this.sub,this.img});
+  DetailsPage2({this.heroTag, this.foodName, this.foodPrice, this.info, this.floor,this.name,this.room , this.sub,this.img });
 
   @override
   _DetailsPage2State createState() => _DetailsPage2State();
@@ -23,7 +24,7 @@ class _DetailsPage2State extends State<DetailsPage2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.purple,
+        backgroundColor:  Color(0xFF162A49),
         appBar: AppBar(
           leading: IconButton(
             onPressed: () {
@@ -48,7 +49,8 @@ class _DetailsPage2State extends State<DetailsPage2> {
             )
           ],
         ),
-        body: ListView(children: [
+        body: ListView(scrollDirection: Axis.vertical
+            ,children: [
           Stack(children: [
             Container(
                 height: MediaQuery.of(context).size.height - 82.0,
@@ -62,7 +64,7 @@ class _DetailsPage2State extends State<DetailsPage2> {
                           topLeft: Radius.circular(45.0),
                           topRight: Radius.circular(45.0),
                         ),
-                        color: Colors.white),
+                      color: Colors.orange,),
                     height: MediaQuery.of(context).size.height - 100.0,
                     width: MediaQuery.of(context).size.width)),
             Positioned(
@@ -88,6 +90,7 @@ class _DetailsPage2State extends State<DetailsPage2> {
                         style: TextStyle(
                             fontFamily: 'Montserrat',
                             fontSize: 22.0,
+                            color: Colors.white,
                             fontWeight: FontWeight.bold)),
                     SizedBox(height: 20.0),
                     Row(
@@ -119,14 +122,11 @@ class _DetailsPage2State extends State<DetailsPage2> {
                     ),
                     Container(
                       padding: EdgeInsets.only(top: 20),
-                      child: Text("VR AR MR :irnbornbipefbnefpbiunefboiefjben fhibn efpija efbhifj nfiuvn fpiuv fnhibf fduin fipu ndbfp"),
+                      child: Text(widget.info),
                       width: 400,
-                      height: 100,
 
-                    ),
-                    Container(
-                      padding: EdgeInsets.only(),
-                      child: Image.asset(widget.img),
+                      height: 200,
+
                     ),
                     SizedBox(height: 20.0),
                     Padding(
@@ -149,7 +149,8 @@ class _DetailsPage2State extends State<DetailsPage2> {
                       ),
                     )
                   ],
-                ))
+                )),
+            bottomSheet(),
           ])
         ]));
   }
@@ -180,6 +181,7 @@ class _DetailsPage2State extends State<DetailsPage2> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  bottomSheet(),
                   Padding(
                     padding: const EdgeInsets.only(top: 8.0, left: 15.0),
                     child: Text(cardTitle,
@@ -219,6 +221,7 @@ class _DetailsPage2State extends State<DetailsPage2> {
         )
     );
   }
+
 
   selectCard(cardTitle) {
     setState(() {

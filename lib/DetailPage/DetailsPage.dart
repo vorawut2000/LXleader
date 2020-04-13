@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'dart:math' as math;
+import 'dart:ui';
+import '../widget/MapPage/bottomSheet.dart';
 
 class DetailsPage extends StatefulWidget {
   final heroTag;
@@ -10,19 +13,23 @@ class DetailsPage extends StatefulWidget {
   final name;
   final sub;
   final img;
+  final img2;
 
-  DetailsPage({this.heroTag, this.foodName, this.foodPrice, this.info, this.floor,this.name,this.room , this.sub, this.img});
+  DetailsPage({this.heroTag, this.foodName, this.foodPrice, this.info, this.floor,this.name,this.room , this.sub, this.img, this.img2});
   @override
   _DetailsPageState createState() => _DetailsPageState();
 }
 
-class _DetailsPageState extends State<DetailsPage> {
+class _DetailsPageState extends State<DetailsPage> with SingleTickerProviderStateMixin {
+
   var selectedCard = 'WEIGHT';
+
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.purple,
+        backgroundColor:  Color(0xFF162A49),
         appBar: AppBar(
           leading: IconButton(
             onPressed: () {
@@ -47,7 +54,8 @@ class _DetailsPageState extends State<DetailsPage> {
             )
           ],
         ),
-        body: ListView(children: [
+        body: ListView(scrollDirection: Axis.vertical
+            ,children: [
           Stack(children: [
             Container(
                 height: MediaQuery.of(context).size.height - 82.0,
@@ -61,7 +69,7 @@ class _DetailsPageState extends State<DetailsPage> {
                           topLeft: Radius.circular(45.0),
                           topRight: Radius.circular(45.0),
                         ),
-                        color: Colors.white),
+                      color: Colors.orange,),
                     height: MediaQuery.of(context).size.height - 100.0,
                     width: MediaQuery.of(context).size.width)),
             Positioned(
@@ -87,6 +95,7 @@ class _DetailsPageState extends State<DetailsPage> {
                         style: TextStyle(
                             fontFamily: 'Montserrat',
                             fontSize: 22.0,
+                            color: Colors.white,
                             fontWeight: FontWeight.bold)),
                     SizedBox(height: 20.0),
                     Row(
@@ -120,12 +129,8 @@ class _DetailsPageState extends State<DetailsPage> {
                       padding: EdgeInsets.only(top: 20),
                       child: Text(widget.info),
                       width: 400,
-                      height: 100,
+                      height: 200,
 
-                    ),
-                    Container(
-                      padding: EdgeInsets.only(),
-                      child: Image.asset(widget.img),
                     ),
                     SizedBox(height: 20.0),
 
@@ -149,9 +154,12 @@ class _DetailsPageState extends State<DetailsPage> {
                       ),
                     )
                   ],
-                ))
+                )),
+            bottomSheet(img: widget.img,),
           ])
+
         ]));
+
   }
 
   Widget _buildInfoCard(String cardTitle, String info, String unit) {
@@ -218,7 +226,10 @@ class _DetailsPageState extends State<DetailsPage> {
             )
         )
     );
+
   }
+
+
 
   selectCard(cardTitle) {
     setState(() {
@@ -226,3 +237,11 @@ class _DetailsPageState extends State<DetailsPage> {
     });
   }
 }
+
+
+
+
+
+
+
+

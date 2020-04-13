@@ -91,7 +91,7 @@ class _LoadingState extends State<Loading>
                     offset: Offset(0.0, 0.0),
                     child: Dot(
                       radius: radius,
-                      color: Colors.black12,
+                      color: Colors.white,
                     ),
                   ),
                   new Transform.translate(
@@ -117,7 +117,7 @@ class _LoadingState extends State<Loading>
                   new Transform.translate(
                     child: Dot(
                       radius: dotRadius,
-                      color: Colors.pinkAccent,
+                      color: Colors.indigo,
                     ),
                     offset: Offset(
                       radius * cos(0.0 + 2 * pi / 4),
@@ -127,7 +127,7 @@ class _LoadingState extends State<Loading>
                   new Transform.translate(
                     child: Dot(
                       radius: dotRadius,
-                      color: Colors.purple,
+                      color: Colors.white,
                     ),
                     offset: Offset(
                       radius * cos(0.0 + 3 * pi / 4),
@@ -137,7 +137,7 @@ class _LoadingState extends State<Loading>
                   new Transform.translate(
                     child: Dot(
                       radius: dotRadius,
-                      color: Colors.yellow,
+                      color: Colors.deepOrange,
                     ),
                     offset: Offset(
                       radius * cos(0.0 + 4 * pi / 4),
@@ -147,7 +147,7 @@ class _LoadingState extends State<Loading>
                   new Transform.translate(
                     child: Dot(
                       radius: dotRadius,
-                      color: Colors.lightGreen,
+                      color: Colors.white,
                     ),
                     offset: Offset(
                       radius * cos(0.0 + 5 * pi / 4),
@@ -157,7 +157,7 @@ class _LoadingState extends State<Loading>
                   new Transform.translate(
                     child: Dot(
                       radius: dotRadius,
-                      color: Colors.orangeAccent,
+                      color: Colors.indigo,
                     ),
                     offset: Offset(
                       radius * cos(0.0 + 6 * pi / 4),
@@ -167,7 +167,7 @@ class _LoadingState extends State<Loading>
                   new Transform.translate(
                     child: Dot(
                       radius: dotRadius,
-                      color: Colors.blueAccent,
+                      color: Colors.white,
                     ),
                     offset: Offset(
                       radius * cos(0.0 + 7 * pi / 4),

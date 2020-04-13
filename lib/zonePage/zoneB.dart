@@ -15,7 +15,7 @@ class _zoneBState extends State<zoneB> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.pinkAccent,
+      backgroundColor: Color(0xFF162A49),
       body: ListView(
         children: <Widget>[
           Padding(
@@ -83,12 +83,13 @@ class _zoneBState extends State<zoneB> {
                         fontFamily: 'Hibition RED ZONE',
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 25.0)),
+                        fontSize: 40.0)),
                 SizedBox(width: 10.0),
-                Text('Hibition Pink ZONE',
+                Text('ZONE B',
                     style: TextStyle(
                         fontFamily: 'Montserrat',
-                        color: Colors.white,
+                        color: Colors.orange,
+                        fontWeight: FontWeight.bold,
                         fontSize: 25.0))
               ],
             ),
@@ -97,7 +98,7 @@ class _zoneBState extends State<zoneB> {
           Container(
             height: MediaQuery.of(context).size.height - 185.0,
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: Colors.orange,
               borderRadius: BorderRadius.only(topLeft: Radius.circular(75.0)),
             ),
             child: ListView(
@@ -109,48 +110,14 @@ class _zoneBState extends State<zoneB> {
                   child: Container(
                       height: MediaQuery.of(context).size.height - 300.0,
                       child: ListView(children: [
-                        _buildFoodItem('assets/images/4.png', 'Automated Drink ', 'Computer Science',
-                            'Automated : irnbornbipefbnefpbiunefboiefjben f ndbfp','1001','1','Computer','Bew1','assets/images/unknown5.png'),
-                        _buildFoodItem('assets/images/1.png', 'Vending Maching', 'Computer Science',
-                            "Vending Maching : irnbornbipefbnefpbiunefboiefjben fhibn efpfp",'1002','1','Physics','Bew2','assets/images/unknown6.png'),
-                        _buildFoodItem('assets/images/2.png', 'Popup Exhibition', 'Computer Science',
-                            'Popup Exhibition : irnbornbipefbnefpbiunefboiefjben fhibn ebf fduin fipu ndbfp','1003','1','Science','Bew3','assets/images/unknown7.png'),
+                        _buildFoodItem('assets/images/KMUTT.png', 'Automated Drink ', 'Computer Science',
+                            'Automated : irnbornbipefbnefpbiunefboiefjben f ndbfp','1001','1','Computer','Bew1','assets/images/5.png'),
+                        _buildFoodItem('assets/images/KMUTT1.png', 'Vending Maching', 'Computer Science',
+                            "Vending Maching : irnbornbipefbnefpbiunefboiefjben fhibn efpfp",'1002','1','Physics','Bew2','assets/images/6.png'),
+                        _buildFoodItem('assets/images/KMUTT2.png', 'Popup Exhibition', 'Computer Science',
+                            'Popup Exhibition : irnbornbipefbnefpbiunefboiefjben fhibn ebf fduin fipu ndbfp','1003','1','Science','Bew3','assets/images/7.png'),
                       ])),),
 
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.only(bottom: 90, left: 80.0),
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Container(
-                                width: 150.0,
-                                child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: <Widget>[
-
-                                      IconButton(
-                                        icon: Icon(Icons.map),
-                                        iconSize: 55,
-                                        color: Colors.orangeAccent,
-                                        onPressed: () {
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(builder: (context) => NewMapPage()),
-                                          );
-                                        },
-                                      ),
-                                    ]
-
-                                )
-                            )
-                          ]
-                      ),
-                    )
-                  ],
-                )
               ],
             ),
           ),
@@ -192,7 +159,8 @@ class _zoneBState extends State<zoneB> {
                                     style: TextStyle(
                                         fontFamily: 'Montserrat',
                                         fontSize: 17.0,
-                                        fontWeight: FontWeight.bold
+                                        fontWeight: FontWeight.bold,
+                                      color: Colors.black,
                                     )
                                 ),
                                 Text(

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import '../../zonePage/zoneA.dart';
 import '../../zonePage/zoneB.dart';
+import '../../zonePage/zoneD1.dart';
 import '../../zonePage/zoneC.dart';
-import '../../zonePage/zoneD.dart';
 import 'dart:math' as math;
 
 class sliding extends StatefulWidget {
@@ -40,29 +40,29 @@ class _slidingState extends State<sliding> {
         children: <Widget>[
           SlidingCard(
             name: 'ZONE A',
-            date: '4.20-30',
-            assetName: 'LXExhibitPlan01-1.jpg',
+            date: 'MC Show Room  , Reseaful Show case ,    LX Building , Innovation show cart',
+            assetName: 'ZoneA.png',
             offset: pageOffset,
             zone: zoneA(),
           ),
           SlidingCard(
             name: 'ZONE B',
-            date: '4.28-31',
-            assetName: 'LXExhibitPlan01-1.jpg',
+            date: 'Automatic Drink , Vending Machine ,     Popup Exhibition',
+            assetName: 'ZoneB.png',
             offset: pageOffset - 1,
             zone: zoneB(),
           ),
           SlidingCard(
             name: 'ZONE C',
-            date: '4.28-31',
-            assetName: 'LXExhibitPlan01-1.jpg',
+            date: 'Escape Romm , ORO',
+            assetName: 'ZoneC.png',
             offset: pageOffset - 2,
             zone: zoneC(),
           ),
           SlidingCard(
             name: 'ZONE D',
-            date: '4.28-31',
-            assetName: 'LXExhibitPlan01-1.jpg',
+            date: 'Self Directed Learning , Self Storage , VR AV MR , Hand On Work Shop Design Studio',
+            assetName: 'ZoneD.png',
             offset: pageOffset - 3,
             zone: zoneD(),
           ),

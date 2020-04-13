@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widget/MapPage/bottomSheet.dart';
 
 class DetailsPage3 extends StatefulWidget {
   final heroTag;
@@ -23,7 +24,7 @@ class _DetailsPage3State extends State<DetailsPage3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.purple,
+        backgroundColor: Color(0xFF162A49),
         appBar: AppBar(
           leading: IconButton(
             onPressed: () {
@@ -48,7 +49,8 @@ class _DetailsPage3State extends State<DetailsPage3> {
             )
           ],
         ),
-        body: ListView(children: [
+        body: ListView(scrollDirection: Axis.vertical
+            ,children: [
           Stack(children: [
             Container(
                 height: MediaQuery.of(context).size.height - 82.0,
@@ -62,7 +64,7 @@ class _DetailsPage3State extends State<DetailsPage3> {
                           topLeft: Radius.circular(45.0),
                           topRight: Radius.circular(45.0),
                         ),
-                        color: Colors.white),
+                      color: Colors.orange,),
                     height: MediaQuery.of(context).size.height - 100.0,
                     width: MediaQuery.of(context).size.width)),
             Positioned(
@@ -88,6 +90,7 @@ class _DetailsPage3State extends State<DetailsPage3> {
                         style: TextStyle(
                             fontFamily: 'Montserrat',
                             fontSize: 22.0,
+                            color: Colors.white,
                             fontWeight: FontWeight.bold)),
                     SizedBox(height: 20.0),
                     Row(
@@ -119,14 +122,9 @@ class _DetailsPage3State extends State<DetailsPage3> {
                     ),
                     Container(
                       padding: EdgeInsets.only(top: 20),
-                      child: Text("Hand on Workshop : irnbornbipefbnefpbiunefboiefjben fhibn efpija efbhifj nfiuvn fpiuv fnhibf fduin fipu ndbfp"),
+                      child: Text(widget.info),
                       width: 400,
-                      height: 100,
-
-                    ),
-                    Container(
-                      padding: EdgeInsets.only(),
-                      child: Image.asset(widget.img),
+                      height: 200,
                     ),
                     SizedBox(height: 20.0),
                     Padding(
@@ -149,7 +147,8 @@ class _DetailsPage3State extends State<DetailsPage3> {
                       ),
                     )
                   ],
-                ))
+                )),
+            bottomSheet(),
           ])
         ]));
   }

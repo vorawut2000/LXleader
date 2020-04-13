@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import '../widget/settingPage.dart';
-import '../DetailPage/DetailsPage3.dart';
+import '../DetailPage/DetailsPage.dart';
+import '../widget/MapPage/NewMapPage.dart';
 import '../widget/ScanPage.dart';
 import '../widget/contactPage.dart';
-import '../widget/MapPage/NewMapPage.dart';
-
 
 
 class zoneD extends StatefulWidget {
@@ -16,7 +15,7 @@ class _zoneDState extends State<zoneD> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor:Color(0xFF162A49),
       body: ListView(
         children: <Widget>[
           Padding(
@@ -45,7 +44,8 @@ class _zoneDState extends State<zoneD> {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) =>contactPage("")),
+                              MaterialPageRoute(
+                                  builder: (context) => contactPage("")),
                             );
                           },
                         ),
@@ -55,7 +55,8 @@ class _zoneDState extends State<zoneD> {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => SacnPage()),
+                              MaterialPageRoute(
+                                  builder: (context) => SacnPage()),
                             );
                           },
                         ),
@@ -65,7 +66,8 @@ class _zoneDState extends State<zoneD> {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => SettingPage()),
+                              MaterialPageRoute(
+                                  builder: (context) => SettingPage()),
                             );
                           },
                         )
@@ -84,21 +86,25 @@ class _zoneDState extends State<zoneD> {
                         fontFamily: 'Hibition RED ZONE',
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 25.0)),
+                        fontSize: 40.0)),
                 SizedBox(width: 10.0),
-                Text('Hibition Red ZONE',
+                Text('ZONE D',
                     style: TextStyle(
                         fontFamily: 'Montserrat',
-                        color: Colors.white,
+                        color: Colors.orange,
+                        fontWeight: FontWeight.bold,
                         fontSize: 25.0))
               ],
             ),
           ),
           SizedBox(height: 40.0),
           Container(
-            height: MediaQuery.of(context).size.height - 185.0,
+            height: MediaQuery
+                .of(context)
+                .size
+                .height - 185.0,
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: Colors.orange,
               borderRadius: BorderRadius.only(topLeft: Radius.circular(75.0)),
             ),
             child: ListView(
@@ -108,48 +114,24 @@ class _zoneDState extends State<zoneD> {
                 Padding(
                   padding: EdgeInsets.only(top: 45.0),
                   child: Container(
-                      height: MediaQuery.of(context).size.height - 300.0,
+                      height: MediaQuery
+                          .of(context)
+                          .size
+                          .height - 300.0,
                       child: ListView(children: [
-                        _buildFoodItem('assets/images/4.png', 'Escase Room', 'Computer Science',
-                            'Escase Room : berliuvv;eurvjner;vujr;jbuerv;uerbvrojvbe;r jbpjtn;beiubn','1013','1','bew9','Math','assets/images/unknown11.png'),
-                        _buildFoodItem('assets/images/1.png', 'ORO', 'Computer Science',
-                            'ORO : neurber;obnerbnio;rebnsr;tobinerilbkjnesr;ijnei;ner;jenr;jiernbe','1014','1','Bew10','Science','assets/images/unknown12.png'),
+                        _buildFoodItem(
+                            'assets/images/KMUTT.png', 'Self Diracted Learning', 'Computer Science',
+                            'Self Storage Room : neinbmenrobginrgpikrnbpiernbmeribnerpbkenrbpi','1004' , '1','Social' , 'Bew4','assets/images/0.png'),
+                        _buildFoodItem('assets/images/KMUTT1.png', 'Self Storage', 'Digital Service Innovation',
+                            'Self Storage : nberobuinesorbunerurniperbniepsrbnerpibnrepbnerpbiner','1005','1','Science' , 'Bew5','assets/images/1.png'),
+                        _buildFoodItem('assets/images/KMUTT2.png', 'VR MR AR', 'Information Technology',
+                            'VR MR AR : nbtiubseo;tbinrgboiergnesruilbre;iur;nurepnre;uineo ingeorinbu[e','1006','1','Math','Bew6','assets/images/2.png'),
+                        _buildFoodItem('assets/images/KMUTT3.png', 'Hand On workshop', 'Information Technology',
+                            'Hand On workshop : bperibuneripubnvo;iuebp;oernaiujenbnerier','1007','1','Health','Bew7','assets/images/3.png'),
+                        _buildFoodItem('assets/images/KMUTT4.png', 'Desing Studio', 'Information Technology',
+                            'Desing Studio : ginero[bnseruipghbrnp;goirnbpiaur;nearipugbner;gguergui','1008' ,'1','Bio','Bew8','assets/images/4.png')
                       ])),),
 
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.only(bottom: 90, left: 80.0),
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Container(
-                                width: 150.0,
-                                child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: <Widget>[
-
-                                      IconButton(
-                                        icon: Icon(Icons.map),
-                                        iconSize: 55,
-                                        color: Colors.orangeAccent,
-                                        onPressed: () {
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(builder: (context) => NewMapPage()),
-                                          );
-                                        },
-                                      ),
-                                    ]
-
-                                )
-                            )
-                          ]
-                      ),
-                    )
-                  ],
-                )
               ],
             ),
           ),
@@ -164,8 +146,8 @@ class _zoneDState extends State<zoneD> {
         child: InkWell(
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => DetailsPage3(
-                    heroTag: imgPath, foodName: foodName, foodPrice: price, info: info, room: room, floor: floor, name: name,sub: sub,img: img)
+                  builder: (context) =>
+                      DetailsPage(heroTag: imgPath, foodName: foodName, foodPrice: price, info: info, room: room, floor: floor, name: name,sub: sub,img: img,)
               ));
             },
             child: Row(
@@ -186,12 +168,13 @@ class _zoneDState extends State<zoneD> {
                           SizedBox(width: 10.0),
                           Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children:[
+                              children: [
                                 Text(
                                     foodName,
                                     style: TextStyle(
                                         fontFamily: 'Montserrat',
                                         fontSize: 17.0,
+                                        color: Colors.black,
                                         fontWeight: FontWeight.bold
                                     )
                                 ),
@@ -218,5 +201,4 @@ class _zoneDState extends State<zoneD> {
         ));
   }
 }
-
 

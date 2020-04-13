@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import '../settingPage.dart';
 import '../../zonePage/zoneA.dart';
 import '../../zonePage/zoneB.dart';
+import '../../zonePage/zoneD1.dart';
 import '../../zonePage/zoneC.dart';
-import '../../zonePage/zoneD.dart';
 import '../ScanPage.dart';
 import 'sliding.dart';
 import 'bottomSheet.dart';
+import 'package:lxprojectbata1/bottomSheet/BottomSheet1.dart';
 import 'tabs.dart';
 
 class NewMapPage extends StatefulWidget {
@@ -35,25 +36,37 @@ class _NewMapPageState extends State<NewMapPage> {
               ],
             ),
           ),
-          bottomSheet(), 
+          bottomSheet1(),
         ],
       ),
     );
   }
+
 }
 
 class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 32),
-      child: Text(
-        "LX'S LEADER APP",
-        style: TextStyle(
-          fontSize: 22,
-          fontWeight: FontWeight.w600,
-        ),
+      padding: EdgeInsets.only(left: 40.0),
+      child: Row(
+        children: <Widget>[
+          Text("LX'S LEADER",
+              style: TextStyle(
+                  fontFamily: 'Hibition RED ZONE',
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25.0)),
+          SizedBox(width: 10.0),
+          Text('APP',
+              style: TextStyle(
+                  fontFamily: '',
+                  color: Color(0xFF162A49),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25.0))
+        ],
       ),
     );
   }
+
 }

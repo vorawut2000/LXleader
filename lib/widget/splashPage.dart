@@ -20,16 +20,18 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.orangeAccent,
+      color: Colors.orange,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Padding(
             padding: EdgeInsets.only(top: 20),
-            child: Container(
-              child: Image.asset('assets/images/Logo.png'),
-              
-            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Image.asset('assets/images/Logo.png'),
+                Image.asset('assets/images/Name.png',width: 300.0,),
+              ],),
           ),
           SizedBox(height: 0,),
           Padding(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widget/MapPage/bottomSheet.dart';
 
 class DetailsPage1 extends StatefulWidget {
   final heroTag;
@@ -10,8 +11,9 @@ class DetailsPage1 extends StatefulWidget {
   final name;
   final sub;
   final img;
+  final img2;
 
-  DetailsPage1({this.heroTag, this.foodName, this.foodPrice, this.info, this.floor,this.name,this.room , this.sub,this.img});
+  DetailsPage1({this.heroTag, this.foodName, this.foodPrice, this.info, this.floor,this.name,this.room , this.sub,this.img , this.img2});
 
   @override
   _DetailsPage1State createState() => _DetailsPage1State();
@@ -23,7 +25,7 @@ class _DetailsPage1State extends State<DetailsPage1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.purple,
+        backgroundColor:  Color(0xFF162A49),
         appBar: AppBar(
           leading: IconButton(
             onPressed: () {
@@ -48,7 +50,8 @@ class _DetailsPage1State extends State<DetailsPage1> {
             )
           ],
         ),
-        body: ListView(children: [
+        body: ListView(scrollDirection: Axis.vertical
+            ,children: [
           Stack(children: [
             Container(
                 height: MediaQuery.of(context).size.height - 82.0,
@@ -62,7 +65,7 @@ class _DetailsPage1State extends State<DetailsPage1> {
                           topLeft: Radius.circular(45.0),
                           topRight: Radius.circular(45.0),
                         ),
-                        color: Colors.white),
+                      color: Colors.orange,),
                     height: MediaQuery.of(context).size.height - 100.0,
                     width: MediaQuery.of(context).size.width)),
             Positioned(
@@ -87,6 +90,7 @@ class _DetailsPage1State extends State<DetailsPage1> {
                     Text(widget.foodName,
                         style: TextStyle(
                             fontFamily: 'Montserrat',
+                            color: Colors.white,
                             fontSize: 22.0,
                             fontWeight: FontWeight.bold)),
                     SizedBox(height: 20.0),
@@ -119,14 +123,11 @@ class _DetailsPage1State extends State<DetailsPage1> {
                     ),
                     Container(
                       padding: EdgeInsets.only(top: 20),
-                      child: Text("Self Storage Room : neinbmenrobginrgpikrnbpiernbmeribnerpbkenrbpierbmperkbnperibk erpbinrp[bn rpbinebpern"),
+                      child: Text(widget.info),
                       width: 400,
-                      height: 100,
 
-                    ),
-                    Container(
-                      padding: EdgeInsets.only(),
-                      child: Image.asset(widget.img),
+                      height: 200,
+
                     ),
                     SizedBox(height: 20.0),
                     Padding(
@@ -148,10 +149,14 @@ class _DetailsPage1State extends State<DetailsPage1> {
                         ),
                       ),
                     )
+
                   ],
-                ))
+                )),
+            bottomSheet(),
           ])
-        ]));
+        ]
+
+        ));
   }
 
   Widget _buildInfoCard(String cardTitle, String info, String unit) {

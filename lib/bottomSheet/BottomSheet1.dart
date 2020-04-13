@@ -12,27 +12,24 @@ const double iconEndMarginTop = 80;  //<-- add edge values
 const double iconsVerticalSpacing = 24;  //<-- add edge values
 const double iconsHorizontalSpacing = 16;  //<-- add edge values
 
-class bottomSheet extends StatefulWidget {
-  final img;
-  bottomSheet({this.img});
+class bottomSheet1 extends StatefulWidget {
   @override
-  _bottomSheetState createState() => _bottomSheetState();
+  _bottomSheet1State createState() => _bottomSheet1State();
 
 }
 
-class _bottomSheetState extends State<bottomSheet>
-
-   with SingleTickerProviderStateMixin {
+class _bottomSheet1State extends State<bottomSheet1>
+    with SingleTickerProviderStateMixin {
   AnimationController _controller;
 
   double get maxHeight => MediaQuery.of(context).size.height;
-    
+
   @override
   void initState() {
     super.initState();
     _controller = AnimationController( //<-- initialize a controller
       vsync: this,
-      duration: Duration(milliseconds: 600), 
+      duration: Duration(milliseconds: 600),
     );
   }
 
@@ -43,7 +40,7 @@ class _bottomSheetState extends State<bottomSheet>
   }
 
   double lerp(double min, double max) =>
-    lerpDouble(min, max, _controller.value);
+      lerpDouble(min, max, _controller.value);
 
   //MAP Margin
   double get headerTopMargin => lerp(15, 15 + MediaQuery.of(context).padding.top); //<-- Add new property
@@ -54,11 +51,11 @@ class _bottomSheetState extends State<bottomSheet>
   double iconTopMargin(int index) =>
       lerp(iconStartMarginTop,
           iconEndMarginTop + index * (iconsVerticalSpacing + iconEndSize)) +
-      headerTopMargin; //<-- calculate top margin based on header margin, and size of all of icons above (from small to big)
+          headerTopMargin; //<-- calculate top margin based on header margin, and size of all of icons above (from small to big)
 
   double iconLeftMargin(int index) =>
       lerp(index * (iconsHorizontalSpacing + iconStartSize), 0); //<-- calculate left margin (from big to small)
-  
+
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
@@ -72,9 +69,9 @@ class _bottomSheetState extends State<bottomSheet>
           child: GestureDetector(
             onTap: _toggle,
             onVerticalDragUpdate: _handleDragUpdate,  //<-- Add verticalDragUpdate callback
-            onVerticalDragEnd: _handleDragEnd,  
+            onVerticalDragEnd: _handleDragEnd,
             child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 32),
+              padding: const EdgeInsets.symmetric(horizontal: 32),
               decoration: const BoxDecoration(
                 color: Color(0xFF162A49),
                 borderRadius: BorderRadius.vertical(top: Radius.circular(32)),
@@ -85,8 +82,8 @@ class _bottomSheetState extends State<bottomSheet>
                   SheetHeader(                //<-- Add a header with params
                     fontSize: headerFontSize,
                     topMargin: headerTopMargin,
-                  ), 
-                
+                  ),
+
                 ],
               ),
             ),
@@ -121,13 +118,13 @@ class _bottomSheetState extends State<bottomSheet>
 
   Widget _fullMap(){
     return Positioned(
-      child: Center(
-        child: Image.asset(
-          widget.img,
-          fit: BoxFit.cover,
-          height: iconSize,
-        ),
-      )
+        child: Center(
+          child: Image.asset(
+            'assets/images/LXExhibitPlan01-1.jpg',
+            fit: BoxFit.cover,
+            height: iconSize,
+          ),
+        )
     );
   }
 }
