@@ -112,9 +112,11 @@ class _zoneCState extends State<zoneC> {
                       height: MediaQuery.of(context).size.height - 300.0,
                       child: ListView(children: [
                         _buildFoodItem('assets/images/KMUTT.png', 'Escase Room', 'Computer Science',
-                            'Escase Room : berliuvv;eurvjner;vujr;jbuerv;uerbvrojvbe;r jbpjtn;beiubn','1013','1','bew9','Math','assets/images/11.png'),
+                            'Escase Room : Lorem Ipsum','C',
+                            'Round 1: 09.00 - 10.00 \nRound 2: 11.00 - 12.00 \nRound 3: 13.00 - 14.00',
+                            'bew9','Math','assets/images/11.png'),
                         _buildFoodItem('assets/images/KMUTT1.png', 'ORO', 'Computer Science',
-                            'ORO : neurber;obnerbnio;rebnsr;tobinerilbkjnesr;ijnei;ner;jenr;jiernbe','1014','1','Bew10','Science','assets/images/12.png'),
+                            'ORO : Lorem Ipsum','C','','Bew10','Science','assets/images/12.png'),
                       ])),),
               ],
             ),

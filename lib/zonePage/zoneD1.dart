@@ -121,15 +121,21 @@ class _zoneDState extends State<zoneD> {
                       child: ListView(children: [
                         _buildFoodItem(
                             'assets/images/KMUTT.png', 'Self Diracted Learning', 'Computer Science',
-                            'Self Storage Room : neinbmenrobginrgpikrnbpiernbmeribnerpbkenrbpi','1004' , '1','Social' , 'Bew4','assets/images/0.png'),
+                            'Self Storage Room : Lorem Ipsum','D' , '','Social' , 'Bew4','assets/images/0.png'),
                         _buildFoodItem('assets/images/KMUTT1.png', 'Self Storage', 'Digital Service Innovation',
-                            'Self Storage : nberobuinesorbunerurniperbniepsrbnerpibnrepbnerpbiner','1005','1','Science' , 'Bew5','assets/images/1.png'),
+                            'Self Storage : Lorem Ipsum','D','1','Science' , 'Bew5','assets/images/1.png'),
                         _buildFoodItem('assets/images/KMUTT2.png', 'VR MR AR', 'Information Technology',
-                            'VR MR AR : nbtiubseo;tbinrgboiergnesruilbre;iur;nurepnre;uineo ingeorinbu[e','1006','1','Math','Bew6','assets/images/2.png'),
+                            'VR MR AR : Lorem Ipsum','D',
+                            'Round 1: 09.00 - 10.00 \nRound 2: 11.00 - 12.00 \nRound 3: 13.00 - 14.00',
+                            'Math','Bew6','assets/images/2.png'),
                         _buildFoodItem('assets/images/KMUTT3.png', 'Hand On workshop', 'Information Technology',
-                            'Hand On workshop : bperibuneripubnvo;iuebp;oernaiujenbnerier','1007','1','Health','Bew7','assets/images/3.png'),
+                            'Hand On workshop : Lorem Ipsum','D',
+                            'Round 1: 09.00 - 10.00 \nRound 2: 11.00 - 12.00 \nRound 3: 13.00 - 14.00'
+                            ,'Health','Bew7','assets/images/3.png'),
                         _buildFoodItem('assets/images/KMUTT4.png', 'Desing Studio', 'Information Technology',
-                            'Desing Studio : ginero[bnseruipghbrnp;goirnbpiaur;nearipugbner;gguergui','1008' ,'1','Bio','Bew8','assets/images/4.png')
+                            'Desing Studio : Lorem Ipsum','D' ,
+                            'Round 1: 09.00 - 10.00 \n Round 2: 11.00 - 12.00 \n Round 3: 13.00 - 14.00',
+                            'Bio','Bew8','assets/images/4.png')
                       ])),),
 
               ],

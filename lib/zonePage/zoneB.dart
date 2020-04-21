@@ -111,11 +111,11 @@ class _zoneBState extends State<zoneB> {
                       height: MediaQuery.of(context).size.height - 300.0,
                       child: ListView(children: [
                         _buildFoodItem('assets/images/KMUTT.png', 'Automated Drink ', 'Computer Science',
-                            'Automated : irnbornbipefbnefpbiunefboiefjben f ndbfp','1001','1','Computer','Bew1','assets/images/5.png'),
+                            'Automated : Lorem Ipsum','B','','Computer','Bew1','assets/images/5.png'),
                         _buildFoodItem('assets/images/KMUTT1.png', 'Vending Maching', 'Computer Science',
-                            "Vending Maching : irnbornbipefbnefpbiunefboiefjben fhibn efpfp",'1002','1','Physics','Bew2','assets/images/6.png'),
+                            "Vending Maching : Lorem Ipsum",'B','','Physics','Bew2','assets/images/6.png'),
                         _buildFoodItem('assets/images/KMUTT2.png', 'Popup Exhibition', 'Computer Science',
-                            'Popup Exhibition : irnbornbipefbnefpbiunefboiefjben fhibn ebf fduin fipu ndbfp','1003','1','Science','Bew3','assets/images/7.png'),
+                            'Popup Exhibition : Lorem Ipsum','B','','Science','Bew3','assets/images/7.png'),
                       ])),),
 
               ],

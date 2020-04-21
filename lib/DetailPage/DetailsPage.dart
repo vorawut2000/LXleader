@@ -115,13 +115,11 @@ class _DetailsPageState extends State<DetailsPage> with SingleTickerProviderStat
                         child: ListView(
                           scrollDirection: Axis.horizontal,
                           children: <Widget>[
-                            _buildInfoCard('Room', widget.room, 'Lx'),
+                            _buildInfoCard('Zone', widget.room, 'Lx'),
                             SizedBox(width: 10.0),
-                            _buildInfoCard('Floor', widget.floor, 'G'),
+                            _buildInfoCard('Subject', widget.name, 'Subject'),
                             SizedBox(width: 10.0),
-                            _buildInfoCard('Subject', widget.sub, 'Subject'),
-                            SizedBox(width: 10.0),
-                            _buildInfoCard('Specker', widget.name, 'Wisa')
+                            _buildInfoCard('Specker', widget.sub , 'Wisa')
                           ],
                         )
                     ),
@@ -129,25 +127,19 @@ class _DetailsPageState extends State<DetailsPage> with SingleTickerProviderStat
                       padding: EdgeInsets.only(top: 20),
                       child: Text(widget.info),
                       width: 400,
-                      height: 200,
+                      height: 150,
 
                     ),
-                    SizedBox(height: 20.0),
-
                     Padding(
                       padding: EdgeInsets.only(bottom:5.0),
                       child: Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(topLeft: Radius.circular(10.0), topRight: Radius.circular(10.0), bottomLeft: Radius.circular(25.0), bottomRight: Radius.circular(25.0)),
-                            color: Colors.green
-                        ),
-                        height: 50.0,
+                        height: 100.0,
                         child: Center(
                           child: Text(
-                              '\Class is Open',
+                              widget.floor,
                               style: TextStyle(
+                                fontWeight: FontWeight.bold,
                                   color: Colors.white,
-                                  fontFamily: 'Montserrat'
                               )
                           ),
                         ),
@@ -183,7 +175,7 @@ class _DetailsPageState extends State<DetailsPage> with SingleTickerProviderStat
 
             ),
             height: 100.0,
-            width: 100.0,
+            width: 110.0,
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
