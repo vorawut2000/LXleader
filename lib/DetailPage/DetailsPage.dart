@@ -119,7 +119,6 @@ class _DetailsPageState extends State<DetailsPage> with SingleTickerProviderStat
                             SizedBox(width: 10.0),
                             _buildInfoCard('Subject', widget.name, 'Subject'),
                             SizedBox(width: 10.0),
-                            _buildInfoCard('Specker', widget.sub , 'Wisa')
                           ],
                         )
                     ),
@@ -164,7 +163,7 @@ class _DetailsPageState extends State<DetailsPage> with SingleTickerProviderStat
             curve: Curves.easeIn,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.0),
-              color: cardTitle == selectedCard ? Color(0xFF7A9BEE) : Colors.white,
+              color: cardTitle == selectedCard ? Color(0xFF162A49) : Colors.white,
               border: Border.all(
                   color: cardTitle == selectedCard ?
                   Colors.transparent :
@@ -175,7 +174,7 @@ class _DetailsPageState extends State<DetailsPage> with SingleTickerProviderStat
 
             ),
             height: 100.0,
-            width: 110.0,
+            width: 170.0,
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,

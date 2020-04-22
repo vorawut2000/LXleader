@@ -34,7 +34,7 @@ class _zoneDState extends State<zoneD> {
                   },
                 ),
                 Container(
-                    width: 150.0,
+                    width: 100.0,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
@@ -60,17 +60,6 @@ class _zoneDState extends State<zoneD> {
                             );
                           },
                         ),
-                        IconButton(
-                          icon: Icon(Icons.menu),
-                          color: Colors.white,
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => SettingPage()),
-                            );
-                          },
-                        )
                       ],
                     ))
               ],
@@ -123,7 +112,7 @@ class _zoneDState extends State<zoneD> {
                             'assets/images/KMUTT.png', 'Self Diracted Learning', 'Computer Science',
                             'Self Storage Room : Lorem Ipsum','D' , '','Social' , 'Bew4','assets/images/0.png'),
                         _buildFoodItem('assets/images/KMUTT1.png', 'Self Storage', 'Digital Service Innovation',
-                            'Self Storage : Lorem Ipsum','D','1','Science' , 'Bew5','assets/images/1.png'),
+                            'Self Storage : Lorem Ipsum','D','','Science' , 'Bew5','assets/images/1.png'),
                         _buildFoodItem('assets/images/KMUTT2.png', 'VR MR AR', 'Information Technology',
                             'VR MR AR : Lorem Ipsum','D',
                             'Round 1: 09.00 - 10.00 \nRound 2: 11.00 - 12.00 \nRound 3: 13.00 - 14.00',
@@ -134,7 +123,7 @@ class _zoneDState extends State<zoneD> {
                             ,'Health','Bew7','assets/images/3.png'),
                         _buildFoodItem('assets/images/KMUTT4.png', 'Desing Studio', 'Information Technology',
                             'Desing Studio : Lorem Ipsum','D' ,
-                            'Round 1: 09.00 - 10.00 \n Round 2: 11.00 - 12.00 \n Round 3: 13.00 - 14.00',
+                            'Round 1: 09.00 - 10.00 \n Round 2: 11.00 - 12.00 \nRound 3: 13.00 - 14.00',
                             'Bio','Bew8','assets/images/4.png')
                       ])),),
 

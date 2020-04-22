@@ -36,7 +36,7 @@ class _zoneAState extends State<zoneA> {
                   },
                 ),
                 Container(
-                    width: 150.0,
+                    width: 100.0,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
@@ -60,16 +60,6 @@ class _zoneAState extends State<zoneA> {
                             );
                           },
                         ),
-                        IconButton(
-                          icon: Icon(Icons.menu),
-                          color: Colors.white,
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => SettingPage()),
-                            );
-                          },
-                        )
                       ],
                     ))
               ],
