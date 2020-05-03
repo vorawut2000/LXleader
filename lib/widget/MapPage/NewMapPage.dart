@@ -6,6 +6,7 @@ import '../../zonePage/zoneB.dart';
 import '../../zonePage/zoneD1.dart';
 import '../../zonePage/zoneC.dart';
 import '../ScanPage.dart';
+import 'package:qrscan/qrscan.dart' as scanner;
 import 'sliding.dart';
 import 'bottomSheet.dart';
 import 'package:lxprojectbata1/bottomSheet/BottomSheet1.dart';

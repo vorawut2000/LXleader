@@ -1,24 +1,27 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../widget/settingPage.dart';
 import '../DetailPage/DetailsPage.dart';
 import '../widget/MapPage/NewMapPage.dart';
-import '../widget/ScanPage.dart';
 import '../widget/contactPage.dart';
+import '../widget/ScanPage.dart' ;
 
 
 
 class zoneA extends StatefulWidget {
   @override
+
   _zoneAState createState() => _zoneAState();
 }
 
 class _zoneAState extends State<zoneA> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       backgroundColor:  Color(0xFF162A49),
       body: ListView(
+
         children: <Widget>[
           Padding(
             padding: EdgeInsets.only(top: 15.0, left: 10.0),
@@ -35,6 +38,7 @@ class _zoneAState extends State<zoneA> {
                     );
                   },
                 ),
+
                 Container(
                     width: 100.0,
                     child: Row(
@@ -56,7 +60,7 @@ class _zoneAState extends State<zoneA> {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => SacnPage()),
+                              MaterialPageRoute(builder: (context) => ScannerPage() ),
                             );
                           },
                         ),
@@ -190,6 +194,7 @@ class _zoneAState extends State<zoneA> {
             )
         ));
   }
+
 
 }
 

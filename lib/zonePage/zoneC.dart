@@ -55,7 +55,7 @@ class _zoneCState extends State<zoneC> {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => SacnPage()),
+                              MaterialPageRoute(builder: (context) => ScannerPage()),
                             );
                           },
                         ),

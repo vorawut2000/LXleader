@@ -12,6 +12,7 @@ class zoneB extends StatefulWidget {
 }
 
 class _zoneBState extends State<zoneB> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +55,7 @@ class _zoneBState extends State<zoneB> {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => SacnPage()),
+                              MaterialPageRoute(builder: (context) => ScannerPage()),
                             );
                           },
                         ),

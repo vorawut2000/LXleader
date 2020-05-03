@@ -6,6 +6,7 @@ import '../widget/ScanPage.dart';
 import '../widget/contactPage.dart';
 
 
+
 class zoneD extends StatefulWidget {
   @override
   _zoneDState createState() => _zoneDState();
@@ -56,7 +57,7 @@ class _zoneDState extends State<zoneD> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => SacnPage()),
+                                  builder: (context) => ScannerPage()),
                             );
                           },
                         ),
