@@ -50,7 +50,7 @@ class _zoneBState extends State<zoneB> {
                           },
                         ),
                         IconButton(
-                          icon: Icon(Icons.camera),
+                          icon: Icon(Icons.camera_alt),
                           color: Colors.white,
                           onPressed: () {
                             Navigator.push(

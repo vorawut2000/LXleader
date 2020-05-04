@@ -13,12 +13,15 @@ const double iconsVerticalSpacing = 24;  //<-- add edge values
 const double iconsHorizontalSpacing = 16;  //<-- add edge values
 
 class bottomSheet1 extends StatefulWidget {
+  final img;
+  bottomSheet1({this.img});
   @override
-  _bottomSheet1State createState() => _bottomSheet1State();
+  _bottomSheet1State1 createState() => _bottomSheet1State1();
 
 }
 
-class _bottomSheet1State extends State<bottomSheet1>
+class _bottomSheet1State1 extends State<bottomSheet1>
+
     with SingleTickerProviderStateMixin {
   AnimationController _controller;
 

@@ -8,6 +8,7 @@ import '../../zonePage/zoneC.dart';
 import '../ScanPage.dart';
 import 'package:qrscan/qrscan.dart' as scanner;
 import 'sliding.dart';
+import '../ScanPage.dart' as scanner;
 import 'bottomSheet.dart';
 import 'package:lxprojectbata1/bottomSheet/BottomSheet1.dart';
 import 'tabs.dart';
@@ -33,6 +34,7 @@ class _NewMapPageState extends State<NewMapPage> {
                 SizedBox(height: 20),
                 Tabs(),
                 SizedBox(height: 20),
+
                 sliding(),
               ],
             ),
@@ -64,7 +66,7 @@ class Header extends StatelessWidget {
                   fontFamily: '',
                   color: Color(0xFF162A49),
                   fontWeight: FontWeight.bold,
-                  fontSize: 25.0))
+                  fontSize: 25.0)),
         ],
       ),
     );

@@ -26,13 +26,13 @@ class _bottomSheetState extends State<bottomSheet>
   AnimationController _controller;
 
   double get maxHeight => MediaQuery.of(context).size.height;
-    
+
   @override
   void initState() {
     super.initState();
     _controller = AnimationController( //<-- initialize a controller
       vsync: this,
-      duration: Duration(milliseconds: 600), 
+      duration: Duration(milliseconds: 600),
     );
   }
 
@@ -121,13 +121,13 @@ class _bottomSheetState extends State<bottomSheet>
 
   Widget _fullMap(){
     return Positioned(
-      child: Center(
-        child: Image.asset(
-          widget.img,
-          fit: BoxFit.cover,
-          height: iconSize,
-        ),
-      )
+        child: Center(
+          child: Image.asset(
+            widget.img,
+            fit: BoxFit.cover,
+            height: iconSize,
+          ),
+        )
     );
   }
 }

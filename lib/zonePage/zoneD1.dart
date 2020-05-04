@@ -40,7 +40,7 @@ class _zoneDState extends State<zoneD> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
                         IconButton(
-                          icon: Icon(Icons.call),
+                          icon: Icon(Icons.camera_alt),
                           color: Colors.white,
                           onPressed: () {
                             Navigator.push(
@@ -51,7 +51,7 @@ class _zoneDState extends State<zoneD> {
                           },
                         ),
                         IconButton(
-                          icon: Icon(Icons.camera),
+                          icon: Icon(Icons.camera_alt),
                           color: Colors.white,
                           onPressed: () {
                             Navigator.push(
