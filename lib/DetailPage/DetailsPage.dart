@@ -56,8 +56,7 @@ class _DetailsPageState extends State<DetailsPage> with SingleTickerProviderStat
         ),
         body: ListView(
             children: [
-              SingleChildScrollView(
-                child: Column(
+                 Column(
                   children: <Widget>[
                     Stack(children: [
                       Container(
@@ -152,8 +151,6 @@ class _DetailsPageState extends State<DetailsPage> with SingleTickerProviderStat
                     ])
                   ],
                 ),
-
-              ),
         ]));
 
   }

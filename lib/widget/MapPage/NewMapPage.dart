@@ -45,6 +45,7 @@ class _NewMapPageState extends State<NewMapPage> {
     );
   }
 
+
 }
 
 class Header extends StatelessWidget {
@@ -67,9 +68,26 @@ class Header extends StatelessWidget {
                   color: Color(0xFF162A49),
                   fontWeight: FontWeight.bold,
                   fontSize: 25.0)),
+          SizedBox(width: 40,),
+          Center(
+            child: Column(
+              children: <Widget>[
+                FloatingActionButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ScannerPage() ),
+                    );
+                  },
+                  tooltip: 'Take a Photo',
+                  child: const Icon(Icons.camera_alt),
+                  backgroundColor: Color(0xFF162A49),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
   }
-
 }
