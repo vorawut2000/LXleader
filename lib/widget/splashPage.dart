@@ -25,12 +25,12 @@ class _SplashScreenState extends State<SplashScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.only(top: 20),
+            padding: EdgeInsets.only(top: 10),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Image.asset('assets/images/Logo.png'),
-                Image.asset('assets/images/Name.png',width: 300.0,),
+                Image.asset('assets/images/Logo.png', width: 250,),
+                Image.asset('assets/images/Name.png',width: 250.0,),
               ],),
           ),
           SizedBox(height: 0,),

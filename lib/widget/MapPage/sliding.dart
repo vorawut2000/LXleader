@@ -33,7 +33,7 @@ class _slidingState extends State<sliding> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.65,
+      height: MediaQuery.of(context).size.height * 0.66,
 
       child: PageView(
         controller: pageController,

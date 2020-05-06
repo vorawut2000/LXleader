@@ -33,7 +33,7 @@ class _NewMapPageState extends State<NewMapPage> {
                 Header(),
                 SizedBox(height: 20),
                 Tabs(),
-                SizedBox(height: 20),
+                SizedBox(height: 10),
 
                 sliding(),
               ],
