@@ -128,7 +128,7 @@ class _DetailsPageState extends State<DetailsPage> with SingleTickerProviderStat
                                 padding: EdgeInsets.only(top: 20),
                                 child: Text(widget.info),
                                 width: 400,
-                                height: 150,
+                                height: 100,
                               ),
                               Padding(
                                 padding: EdgeInsets.only(bottom:0.0),
