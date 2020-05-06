@@ -46,13 +46,6 @@ class _DetailsPageState extends State<DetailsPage> with SingleTickerProviderStat
                   fontSize: 18.0,
                   color: Colors.white)),
           centerTitle: true,
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.more_horiz),
-              onPressed: () {},
-              color: Colors.white,
-            )
-          ],
         ),
         body: ListView(
             children: [
