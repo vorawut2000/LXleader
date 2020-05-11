@@ -68,20 +68,31 @@ class Header extends StatelessWidget {
                   color: Color(0xFF162A49),
                   fontWeight: FontWeight.bold,
                   fontSize: 25.0)),
-          SizedBox(width: 40,),
+         
           Center(
             child: Column(
               children: <Widget>[
-                FloatingActionButton(
+                FlatButton(
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => ScannerPage() ),
                     );
                   },
-                  tooltip: 'Take a Photo',
-                  child: const Icon(Icons.camera_alt),
-                  backgroundColor: Color(0xFF162A49),
+                  child: Container(
+                    padding: EdgeInsets.all(7),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20), 
+                      color: Color(0xFF162A49)),
+                    width: MediaQuery.of(context).size.width * 0.3,
+                    child: Row(
+                      children: <Widget>[
+                        SizedBox(width: 10),
+                        Icon(Icons.camera_alt, color: Colors.white),
+                        SizedBox(width: 10),
+                        Text("Scan QR", style: TextStyle(color: Colors.white),)],
+                    ),
+                  ),
                 ),
               ],
             ),
